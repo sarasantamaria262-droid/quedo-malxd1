@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pequeños Exploradores</title>
+  <link rel="stylesheet" href="inicio.css">
+  <link rel="stylesheet" href="queaprenderas.css">
+<link rel="stylesheet" href="porque pequeños exploradores.css">
+<link rel="stylesheet" href="carrucel.css">
+<link rel="stylesheet" href="seccion-galeria.css">
+<link rel="stylesheet" href="Contacto.css">
+<link  rel="stylesheet" href="footer.css">
+</head>
+
+<body>
+
+  <!-- BARRA DE NAVEGACIÓN SUPERIOR -->
+  <header class="header-container">
+    <nav class="navbar">
+      
+      <!-- Isotipo del osito a la izquierda -->
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/isotipo.png" alt="Pequeños Exploradores" class="img-isotipo">
+        </a>
+      </div>
+
+      <!-- Menú de botones a la derecha -->
+      <ul class="nav-links">
+        <li>
+          <a href="index.html">
+            <img src="img/Inicio.png" alt="Inicio" class="btn-inicio">
+          </a>
+        </li>
+        <li>
+          <a href="nosotros.html">
+            <img src="img/Nosotros (1).png" alt="Nosotros" class="btn-nosotros">
+          </a>
+        </li>
+        <li>
+          <a href="galeria.html">
+            <img src="img/Galería .png" alt="Galería" class="btn-galeria">
+          </a>
+        </li>
+        <li>
+          <a href="contacto.html">
+            <img src="img/Contactos.png" alt="Contacto" class="btn-contacto">
+          </a>
+        </li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <!-- ESCENA PRINCIPAL -->
+  <main class="escena-container">
+    
+    <!-- Oso a la izquierda (Cuadro azul izquierdo) -->
+    <div class="posicion-oso">
+      <img src="img/Oso 1 - Mascota.png" alt="Oso Explorador" class="img-oso">
+    </div>
+
+    <!-- Letrero + Botón a la derecha (Cuadro azul derecho) -->
+    <div class="posicion-letrero">
+      <img src="img/Titulo-Pequeños exploradores.png" alt="Pequeños Exploradores" class="img-letrero">
+      
+      <a href="#" class="btn-software">
+        🎮 Entrar al software
+      </a>
+    </div>
+
+  </main>
+<!-- SECCIÓN CONTENEDORA BLANCA -->
+<section class="seccion-blanca-contenedor">
+  
+  <!-- Contenido interno (sobre fondo blanco) -->
+  <div class="contenido-aprenderas">
+    
+    <!-- Título -->
+    <div class="aprenderas-titulo">
+      <img src="img/que aprenderas.png" alt="¿Qué aprenderás?" height="200px">
+    </div>
+
+    <!-- Las 3 tarjetas -->
+    <div class="tarjetas-container">
+      <div class="tarjeta-item">
+        <img src="img/Plantas-tarjeta.png" alt="Plantas">
+      </div>
+      <div class="tarjeta-item">
+        <img src="img/Seres vivos-Tarjeta.png" alt="Seres vivos">
+      </div>
+      <div class="tarjeta-item">
+        <img src="img/Animales-Tarjeta.png" alt="Animales">
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="porque-seccion">
+  <!-- Título principal de la sección -->
+  <div class="porque-titulo">
+    <img src="img/¿Por qué pequeños exploradores.png" alt="¿Por qué Pequeños Exploradores?">
+  </div>
+
+  <!-- Contenedor de las 3 tarjetas de características -->
+  <div class="porque-grid">
+    <div class="porque-card">
+      <img src="img/Aprende jugando.png" alt="Aprende jugando">
+    </div>
+    <div class="porque-card">
+      <img src="img/Desarrolla habilidades .png" alt="Desarrolla habilidades">
+    </div>
+    <div class="porque-card">
+      <img src="img/Retroalimentación inmediata.png" alt="Retroalimentación inmediata">
+    </div>
+  </div>
+</section>
+
+  <section class="actividades-seccion">
+    <!-- titulo del carrucel -->
+ <div class="actividades-titulo">
+      <img src="img/Conoce algunas actividades .png" alt="¿Qué aprenderás?" width="800px" height="80px">
+ </div>
+
+<div class="carrusel-1" id="c1">
+  <div class="slides" id="slides1">
+    <div class="slide">
+      <img src="img/Actividad1.png" alt="Actividad1">
+    </div>
+    <div class="slide">
+      <img src="img/Actividad2.png" alt="Actividad2">
+    </div>
+    <div class="slide">
+      <img src="img/Actividad3.png" alt="Actividad3">
+    </div>
+    <div class="slide">
+  <img src="img/Actividad4.png" alt="Actividad4">
+</div>
+  </div>
+  <button class="flecha izq" onclick="moverCarrusel1(-1)">&#10094;</button>
+  <button class="flecha der" onclick="moverCarrusel1(1)">&#10095;</button>
+</div>
+<!-- BOTÓN "VER MÁS EN LA GALERÍA" DEBAJO DEL CARRUSEL -->
+<div class="seccion-galeria" style="display:flex; justify-content:center; width:100%; margin:20px 0; padding:0; position:static;">
+  <a href="galeria.html">
+    <img src="img/Ver más en galería.png" alt="Ver más en la galería" class="btn-galeria-img" style="height:60px; width:auto; display:block; position:static; margin:0;">
+  </a>
+</div>  </section>  
+       
+   <!-- FOOTER -->
+  <footer class="footer-principal">
+    <img src="img/img-footer/Footer.png" alt="" class="footer-fondo">
+
+    <div class="footer-contenido">
+
+      <div class="footer-col footer-logo">
+        <img src="img/img-footer/oso-footer.png" alt="Pequeños Exploradores" class="logo-footer">
+        <img src="img/img-footer/Mensaje1.png" alt="Explora, aprende y juega mientras descubres el mundo que te rodea" class="mensaje-footer">
+
+        <div class="redes">
+          <a href="https://www.facebook.com/tu-pagina" target="_blank" rel="noopener noreferrer">
+            <img src="img/img-footer/Logo-facebook.png" alt="Facebook">
+          </a>
+          <a href="https://www.instagram.com/peq.explora7313" target="_blank" rel="noopener noreferrer">
+            <img src="img/img-footer/Logo-instagram.png" alt="Instagram">
+          </a>
+          <a href="https://www.youtube.com/@tu-canal" target="_blank" rel="noopener noreferrer">
+            <img src="img/img-footer/Logo-youtube.png" alt="YouTube">
+          </a>
+          <a href="https://www.tiktok.com/@tu-usuario" target="_blank" rel="noopener noreferrer">
+            <img src="img/img-footer/Logo-tiktok.png" alt="TikTok">
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col footer-divisor">
+        <img src="img/img-footer/Enlaces-rapidos.png" alt="Enlaces rápidos" class="titulo-footer">
+        <ul class="lista-footer">
+          <li><a href="index.html"><img src="img/img-footer/Inicio2.png" alt="Inicio"></a></li>
+          <li><a href="nosotros.html"><img src="img/img-footer/Nosotros2.png" alt="Nosotros"></a></li>
+          <li><a href="galeria.html"><img src="img/img-footer/Galería2.png" alt="Galería"></a></li>
+          <li><a href="contacto.html"><img src="img/img-footer/Contacto2.png" alt="Contacto"></a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-divisor footer-centrado">
+        <img src="img/img-footer/Software-educativo.png" alt="Software educativo" class="titulo-footer">
+        <img src="img/img-footer/Mensaje2.png" alt="Actividades interactivas para niños de primero de primaria en el área de Ciencias Naturales." class="texto-footer-img">
+      </div>
+
+      <div class="footer-col footer-divisor">
+        <img src="img/img-footer/Contactanos.png" alt="Contáctanos" class="titulo-footer">
+        <img src="img/img-footer/Correo.png" alt="peq.explora7313@gmail.com" class="correo-item-img">
+        <img src="img/img-footer/Celular.png" alt="" class="contacto-item-img">
+        <img src="img/img-footer/Ubicación.png" alt="Colombia" class="ubicación-item-img">
+      </div>
+
+      <img src="img/img-footer/Imagen.png" alt="" class="footer-decoracion">
+    </div>
+
+    <div class="footer-copyright">
+      <img src="img/img-footer/Derechos-reservados.png" alt="© 2026 Pequeños Exploradores. Todos los derechos reservados.">
+    </div>
+  </footer>
+
+  <!-- EL SCRIPT SIEMPRE AL FINAL -->
+  <script src="inicio.js"></script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+/* ===== GALERÍA – Pequeños Exploradores ===== */
+:root {
+  --cafe: #a8531a;
+  --cafe-oscuro: #5a2d0c;
+  --verde: #2e7d32;
+  --azul-texto: #4a86c8;
+  --morado: #8e6bbf;
+  --crema: #f7f6dc;
+  --celeste: #e3f1fb;
+  --borde-crema: #c9dca8;
+  --borde-celeste: #9fcbe8;
+  --fuente: "Fredoka", "Baloo 2", "Comic Sans MS", sans-serif;
+}
+
+.pagina-galeria {
+  margin: 0;
+  font-family: var(--fuente);
+  color: var(--cafe-oscuro);
+  background: #fff;
+}
+
+/* ---------- HERO ---------- */
+.gal-hero {
+  position: relative;
+  min-height: 430px;
+  margin-top: -90px;            /* ajusta según la altura de tu navbar */
+  padding-top: 130px;
+  background: url("img/galeria/Fondo\ del\ menú\ principal\ .png") center bottom / cover no-repeat,
+              linear-gradient(#5aaef0 0%, #bfe3fb 70%, #e8f6ff 100%);
+  text-align: center;
+  overflow: hidden;
+}
+.gal-hero-centro { position: relative; z-index: 2; }
+
+.gal-titulo-img    { 
+  display: block; 
+  margin: 55px auto 0;
+   width: min(450px, 70%);
+   }
+.gal-subtitulo-img { display: block; margin: 20px auto 0; width: min(300px, 60%); }
+
+.gal-camara { position: absolute; left: 7%; top: 120px; width: clamp(90px, 13vw, 170px); }
+
+
+/* Contenedor: que quepan los 1200px + el padding */
+.gal-contenido {
+  max-width: 1240px;   /* antes 1100px */
+  margin: 0 auto;
+  padding: 30px 20px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+/* ---------- BLOQUE 1 ---------- */
+.bloque-imagen img {
+  display: block;
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* ---------- BLOQUE 2 ---------- */
+.bloque-software {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;   /* mismo ancho que el bloque 1 */
+  margin: 0 auto;
+}
+.fondo-software {
+  display: block;
+  width: 100%;         /* antes 1000px */
+  height: auto;
+}
+/* El carrusel se coloca sobre la zona vacía de la derecha */
+.bloque-software .visor {
+  position: absolute;
+  left: 33%;
+  right: 2%;
+  top: 27%;
+}
+
+/* Botón ¡Quiero explorar! abajo al centro */
+.bloque-software .btn-explorar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 5%;
+  margin: 0 auto;
+  width: 18%;
+}
+.bloque-software .btn-explorar img { width: 100%; }
+
+.bloque-3 { background: var(--crema);   border: 2px solid var(--borde-crema); }
+
+/* Títulos de bloque en imagen */
+.titulo-bloque {
+  grid-column: 1 / -1;
+  justify-self: start;
+  width: min(420px, 90%);
+  margin: -6px 0 0 -14px;
+}
+
+/* Cabecera del bloque 3 (hecha con CSS) */
+.bloque-cabecera {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  margin: -6px 0 0 -14px;
+}
+.num {
+  flex: none;
+  width: 66px; height: 66px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  font-size: 2.3rem; font-weight: 700; color: #fff;
+  position: relative; z-index: 2;
+}
+.num-morado { background: var(--morado); }
+
+.cinta {
+  margin: 0 0 0 -14px;
+  padding: 10px 34px 10px 30px;
+  background: var(--cafe);
+  color: #fff;
+  font-size: 1.35rem; font-weight: 600; line-height: 1.15;
+  border-radius: 30px 40px 28px 42px / 36px 28px 40px 30px;
+  transform: rotate(-2deg);
+}
+
+/* Textos laterales */
+.bloque-1-texto, .bloque-2-texto, .bloque-3-texto { position: relative; align-self: start; }
+.bloque-1-texto p, .bloque-2-texto p, .bloque-3-texto p {
+  margin: 0; font-size: .95rem; font-weight: 600; line-height: 1.35;
+}
+.bloque-3-texto p { color: var(--morado); }
+.azul { color: var(--azul-texto); }
+
+.btn-play {
+  display: inline-grid; place-items: center;
+  width: 60px; height: 54px; margin-top: 16px;
+  background: var(--morado); color: #fff; font-size: 1.5rem;
+  border-radius: 14px; text-decoration: none; transform: rotate(-8deg);
+}
+
+/* ---------- FOTOS / VIDEOS (traen su etiqueta en la imagen) ---------- */
+.fotos {
+  display: flex; justify-content: space-around; align-items: flex-start; gap: 18px;
+}
+.foto-item, .video-item { margin: 0; text-align: center; flex: 1; }
+.foto-item img, .video-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.bloque-3 .fotos { grid-column: 2; }
+
+/* ---------- VISOR DE PANTALLAS ---------- */
+.visor { display: flex; align-items: center; gap: 10px; }
+.visor-ventana { overflow: hidden; flex: 1; }
+.visor-pista {
+  display: flex; gap: 18px;
+  transition: transform .45s ease;
+}
+.pantalla { flex: 0 0 calc((100% - 36px) / 3); margin: 0; text-align: center; }
+.pantalla-img {
+  width: 100%; aspect-ratio: 16 / 10; object-fit: cover;
+  border: 3px solid #fff; box-shadow: 0 0 0 2px #7aa9c9;
+}
+.pantalla .etiqueta-img {
+  width: 75%; height: auto;
+  margin-top: 8px;
+}
+
+.flecha-verde {
+  flex: none; width: 44px; height: 44px;
+  padding: 0; border: 0; background: none;
+  cursor: pointer;
+}
+.flecha-verde img { width: 100%; height: 100%; display: block; }
+.flecha-verde:hover { transform: scale(1.08); }
+.flecha-verde:disabled { opacity: .4; cursor: default; transform: none; }
+
+/* Botón ¡Quiero explorar! */
+.btn-explorar {
+  grid-column: 1 / -1;
+  justify-self: center;
+  margin-top: 6px;
+}
+.btn-explorar img { display: block; width: 200px; max-width: 100%; }
+.btn-explorar:hover { transform: translateY(-2px); }
+
+/* ---------- CIERRE ---------- */
+.cierre-imagen img {
+    display: block;
+    margin: 0 auto;      /* centra la imagen (position: center no existe) */
+    width: 100%;         /* se adapta al ancho disponible */
+    max-width: 1100px;   /* sin pasar de 1100px */
+    height: auto;        /* mantiene la proporción original */
+    border-radius: 10px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 800px) {
+  .bloque { padding: 24px 18px; grid-template-columns: 1fr; }
+  .bloque-3 .fotos { grid-column: 1; }
+  .fotos { flex-direction: column; align-items: stretch; }
+  .pantalla { flex-basis: 70%; }
+  .gal-camara { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .visor-pista { transition: none; }
+}
+/* Header flotando sobre el cielo, como en el inicio */
+.pagina-galeria .header-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  z-index: 20;
+}
+
+/* Empuja el contenido del hero hacia abajo para que no quede tapado por el header */
+.pagina-galeria .gal-hero {
+  padding-top: 130px;
+}
+/* Nubes en el borde inferior del fondo (solo Galería) */
+.gal-hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -54px;
+  height: 110px;
+  background: url('img/img-Nosotros/Fondo\ blanco\ \ nubes.png') center top / 100% auto no-repeat;
+  pointer-events: none;
+  z-index: 1;
+}
+.gal-camara  { position: absolute; left: 7%;  top: 110px; width: clamp(90px, 13vw, 170px); z-index: 2; }
+.gal-pollito { position: absolute; right: 7%; top: 110px; width: clamp(80px, 11vw, 140px); z-index: 2; }
+
+.pantalla { flex: 0 0 calc((100% - 54px) / 4); margin: 0; text-align: center; }

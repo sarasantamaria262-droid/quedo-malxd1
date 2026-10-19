@@ -1,0 +1,72 @@
+/* --- CONTENEDOR BLANCO INFERIOR --- */
+.seccion-blanca-contenedor {
+  width: 100%;
+  position: relative;
+  margin-top: 50px; /* Separación del camino/oso superior */
+  z-index: 10;
+}
+
+
+
+.contenido-aprenderas {
+  /* Mismos colores y bordes que la sección verde inferior */
+  background-color: #faf8f2; 
+  border: 2px solid #e1eed0;   /* Mismo borde sutil que ¿Por qué Pequeños Exploradores? */
+  border-radius: 25px;        /* Mismo redondeo de esquinas */
+  
+ /* Ancho y alineación */
+width: 100%;
+max-width: 1500px;        /* Limita el ancho para centrarse igual que la sección inferior */
+height: auto;                /* Permite que la altura se ajuste sola al contenido */
+margin:40px auto 40px auto;/* El primer value (-40px) sube la caja a las nubes; 'auto' la centra */
+padding: 40px 20px;
+box-sizing: border-box;
+
+/* Distribución de contenido */
+display: flex;
+flex-direction: column;
+align-items: center;
+gap:30px;
+}
+
+/* Título e imágenes centradas */
+.aprenderas-titulo img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.aprenderas-titulo img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.tarjetas-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  max-width: 1050px;
+  width: 100%;
+}
+
+.tarjeta-item {
+  flex: 1;
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+  transition: transform 0.25s ease;
+}
+
+.tarjeta-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.tarjeta-item:hover {
+  transform: translateY(-8px); /* Elevación suave */
+}

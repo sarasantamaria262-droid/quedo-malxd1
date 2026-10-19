@@ -1,0 +1,135 @@
+.footer-principal {
+  position: relative;
+  padding-top: 40px;
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.footer-fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+.footer-contenido {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 20px ;
+  gap: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  min-width: 0; /* evita que el texto largo empuje el ancho */
+}
+
+.footer-logo {
+  flex: 0 0 26%;
+  padding-left:20px;
+  align-items: flex-start; /* esta columna se queda alineada a la izquierda */
+}
+
+.footer-divisor {
+    padding-left: 20px;
+}
+
+.footer-centrado {
+  align-items: flex-start;
+  text-align: left;
+}
+.footer-contenido > :nth-child(2) { flex: 0 0 16%; }
+.footer-contenido > :nth-child(3) { flex: 0 0 22.5%; }
+.footer-contenido > :nth-child(4) { flex: 0 0 21.5%; }
+
+.logo-footer {
+  width: 90px;
+}
+
+.mensaje-footer {
+  width: 285px;
+}
+
+.titulo-footer {
+  height: 25px; /* mismo alto para todos los títulos, así quedan a la misma línea */
+  width: auto;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.redes {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.redes img {
+  width: 30px;
+  height: 30px;
+}
+
+.lista-footer {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.lista-footer img {
+  height: 23px;
+}
+.lista-footer li:nth-child(1) img { height: 22px; }  /* Inicio */
+.lista-footer li:nth-child(2) img { height: 20px; }  /* Nosotros */
+.lista-footer li:nth-child(3) img { height: 22px; }  /* Galería */
+.lista-footer li:nth-child(4) img { height: 22px; }  /* Contacto */
+
+.texto-footer-img {
+  width: 280px;
+}
+
+.correo-item-img {
+  height: 32px;
+  margin: 3px 0;
+}
+
+.contacto-item-img {
+  height: 26px;
+  margin: 3px 0;
+}
+
+.ubicación-item-img {
+  height: 34px;
+  margin: 3px 0;
+}
+
+.footer-decoracion {
+  width: 180px;
+  flex-shrink: 0;
+  margin-left: auto;     /* nueva */
+  margin-right: 3%;      /* nueva */
+}
+
+.footer-copyright {
+  text-align: center;
+  padding: 12px 0;
+  position: relative;
+  z-index: 1;
+ 
+}
+
+.footer-copyright img {
+  height: 36px;
+}

@@ -1,0 +1,154 @@
+
+.img-oso-nosotros {
+  height: 350px !important; /* Fuerza una altura máxima fija */
+  max-height: 350px !important;
+  width: auto !important;
+  display: block;
+  position:relative;
+  left: 16vw;
+}
+.nosotros-texto {
+  position: absolute;
+  top: 15%;
+  left: 55%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 720px;
+}
+
+.letrero-nosotros {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+}
+
+.parrafo-nosotros {
+  width: 100%;
+  max-width: 620px;
+  height: auto;
+}
+
+.seccion { 
+  position: relative; 
+  max-width: 1000px;
+   margin: 0 auto;
+    padding: 40px 30px;
+   }
+
+.fila {
+   display: flex;
+   justify-content: center;
+    flex-wrap: wrap;
+     gap: 10px;
+     }
+.mision-vision { 
+  display: flex;
+   justify-content: center;
+   gap: 50px;
+   flex-wrap: wrap; 
+    }
+
+.titulo-seccion { 
+  display: block; 
+  width: min(90%, 500px); 
+  margin: 20px auto; }
+
+/* tamaños de tarjeta */
+.tarjeta-grande {
+   width: 350px;
+   }
+.tarjeta.tarjeta-valor  {
+   width: 180px;
+   }
+.tarjeta-equipo { 
+  width: 240px;
+ }
+
+/* efecto de voltear */
+.tarjeta {
+   perspective: 1000px; 
+   cursor: pointer;
+   }
+.tarjeta-inner {
+   position: relative; 
+   transform-style: preserve-3d; 
+   transition: transform 0.6s;
+   }
+.tarjeta:hover .tarjeta-inner,
+.tarjeta.volteada .tarjeta-inner { 
+  transform: rotateY(180deg);
+ }
+
+.cara { 
+  display: block; 
+  width: 100%;
+   height: auto;
+    backface-visibility: hidden; 
+  }
+.cara.atras {
+   position: absolute; 
+   inset: 0; 
+    transform: rotateY(180deg); 
+   }
+
+/* decoraciones: flotan y no estorban los clics */
+.deco { 
+  position: absolute; 
+  pointer-events: none;
+ }
+.huella-izq {
+   width: 60px;
+   left: 0;
+    top: 20px; 
+  }
+.mancha-der { 
+  width: 90px; 
+  right: 0; 
+  top: 30px;
+ }
+.mancha-izq {
+   width: 100px; 
+   left: 0;
+    top: 20px;
+   }
+.brujula    {
+   width: 60px;
+    right: 20px;
+     top: 30px;
+     }
+
+.tarjeta-valor{
+  width: 170px;
+}
+
+     .tarjeta-equipo{
+   width: 250px;
+   }
+   .centrar-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.banner-explorador {
+  max-width: 1000px;
+  width: 150%;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.banner-explorador img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}  
+main {
+  background: url('img/img-Nosotros/Fondo\ blanco\ \ nubes.png') center top / 100% auto no-repeat;
+  margin-top: -80px;
+  padding-top: 80px;
+}

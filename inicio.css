@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 50vh;
+  background-image: url('img/Fondo\ estático\ .png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+}
+
+/* --- BARRA DE NAVEGACIÓN --- */
+.header-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+}
+
+.navbar {
+  background-color: #ffffff;
+  border: 2px solid #5a5a5a;
+  border-radius: 50px;
+  width: 90%;
+  max-width: 850px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.img-isotipo {
+  height: 42px;
+  width: auto;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  list-style: none;
+}
+
+.nav-links img {
+  width: auto;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.nav-links img:hover {
+  transform: scale(1.08);
+}
+
+.btn-inicio { height: 31px; }
+.btn-nosotros { height: 29px; }
+.btn-galeria { height: 23px; }
+.btn-contacto { height: 23px; }
+
+/* --- ESCENA PRINCIPAL (OSO + LETRERO) --- */
+.escena-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 20px auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* CONTROL DEL OSO: AQUÍ ESTÁ EL TRUCO PARA QUE NO EXPLOTE */
+.posicion-oso {
+  flex: 0 0 auto;
+  max-width: 350px; /* Limita el ancho del contenedor */
+}
+
+.img-oso {
+  height: 350px !important; /* Fuerza una altura máxima fija */
+  max-height: 350px !important;
+  width: auto !important;
+  display: block;
+}
+
+/* CONTROL DEL LETRERO */
+.posicion-letrero {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 480px;
+}
+
+.img-letrero {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* BOTÓN VERDE */
+.btn-software {
+  margin-top: 15px;
+  background-color: #5b8e23;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 10px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.btn-software:hover {
+  transform: scale(1.05);
+}
+/* --- ESCENA PRINCIPAL --- */
+.escena-container {
+  width: 100%;
+  max-width: 1000px;      /* Le damos un poco más de aire al contenedor */
+  margin: 10px auto 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;    
+  gap: 15px;              /* Espacio positivo para alejarlo un tris */
+}
+
+/* OSO: Le quitamos el solapamiento */
+.posicion-oso {
+  flex: 0 0 auto;
+  margin-right: 0px;      /* Eliminamos el choque con el avión de papel */
+}
+
+.img-oso {
+  height: 370px !important; 
+  max-height: 370px !important;
+  width: auto !important;
+  display: block;
+}
+
+/* LETRERO */
+.posicion-letrero {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+}
+.img-oso {
+  height: 380px !important; /* Altura ideal idéntica a la muestra */
+  max-height: 380px !important;
+  width: auto !important;
+  display: block;
+}
+
+/* LETRERO A LA DERECHA DEL OSO */
+.posicion-letrero {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 520px;
+  z-index: 1;
+}
+
+.img-letrero {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* BOTÓN VERDE "ENTRAR AL SOFTWARE" */
+.btn-software {
+  margin-top: -10px;       /* Sube un poquito el botón para pegarlo al letrero de madera */
+  background-color: #5b8e23;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 10px 28px;
+  border-radius: 25px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease;
+}
+
+.btn-software:hover {
+  transform: scale(1.05);
+}
+/* Nubes como fondo detrás del contenido (solo Inicio) */
+.seccion-blanca-contenedor {
+  position: relative;
+}
+
+.seccion-blanca-contenedor::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -70px;
+  height: 300px;
+  background: url('img/Fondo\ blanco\ \ nubes.png') center top / 100% auto no-repeat;
+  z-index: -1;
+}

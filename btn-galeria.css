@@ -1,0 +1,28 @@
+/* Contenedor que ubica y centra el botón entre el carrusel y el footer */
+.seccion-galeria {
+  display: flex;
+  justify-content: center; /* Centra la imagen horizontalmente */
+  align-items: center;     /* Centra la imagen verticalmente */
+  width: 100%;        /* Espacio superior con respecto al carrusel */
+  margin-bottom: 40px;     /* Espacio inferior con respecto al footer */
+}
+
+/* Estilos de la imagen del botón */
+.btn-galeria-img {
+  max-width: 300px;        /* Ancho del botón (ajústalo según tu diseño) */
+  width: 100%;             /* Permite que se adapte a pantallas pequeñas */
+  height: auto;            /* Mantiene la proporción de la imagen */
+  display: block;          /* Elimina espacios blancos residuales */
+  cursor: pointer;         /* Muestra el puntero de mano al pasar encima */
+  transition: transform 0.2s ease; /* Transición suave para el efecto hover */
+}
+
+/* Efecto al pasar el cursor sobre la imagen */
+.btn-galeria-img:hover {
+  transform: scale(1.05);  /* Agranda ligeramente el botón */
+}
+
+/* Efecto opcional al hacer clic */
+.btn-galeria-img:active {
+  transform: scale(0.98);  /* Simula la pulsación del botón */
+}

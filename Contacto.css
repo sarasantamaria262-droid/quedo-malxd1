@@ -1,0 +1,127 @@
+:root {
+  --cafe-oscuro: #5a2d0c;
+  --campo: #fbf3e2;
+  --fuente: "Fredoka", "Comic Sans MS", sans-serif;
+}
+
+.pagina-Contacto {
+  margin: 0;
+  font-family: var(--fuente);
+  color: var(--cafe-oscuro);
+  background: #fff;
+}
+
+.pagina-Contacto .header-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  z-index: 20;
+}
+
+.con-hero {
+  position: relative;
+  min-height: 380px;
+  margin-top: -90px;
+  padding-top: 130px;
+  padding-bottom:100px;
+  background: url("img/contacto/Fondo\ estático\ .png") center bottom / cover no-repeat,
+              linear-gradient(#5aaef0 0%, #bfe3fb 70%, #e8f6ff 100%);
+  text-align: center;
+  overflow: hidden;
+}
+.con-hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -54px;
+  height: 110px;
+  background: url("img/img-Nosotros/Fondo\ blanco\ \ nubes.png") center top / 100% auto no-repeat;
+  pointer-events: none;
+  z-index: 1;
+}
+.con-hero-centro { position: relative; z-index: 2; }
+.con-hero img { display: block; margin-left: auto; margin-right: auto; height: auto; }
+.con-titulo { width: min(450px, 70%); margin-top: 75px; }
+.con-lema   { width: min(280px, 55%); margin-top: 10px; }
+.con-intro  { width: min(580px, 88%); margin-top: 22px; }
+.con-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: stretch;
+}
+.con-aqui img { display: block; width: 100%; height: auto; }
+.con-form { position: relative; }
+.con-form > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+/* Base de los campos: se colocan encima de la tarjeta */
+.con-form input,
+.con-form textarea {
+  position: absolute;
+  left: 5.5%;
+  width: 89%;
+  box-sizing: border-box;
+  padding: 0 12px 0 52px;   /* 52px deja libre el ícono */
+  border: 0;
+  outline: none;
+  background-color: transparent;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  font: 600 .9rem var(--fuente);
+  color: var(--cafe-oscuro);
+}
+
+/* Posición de cada campo */
+.con-form .campo-nombre  { top: 15.7%; height: 11%; }
+.con-form .campo-correo  { top: 31.4%; height: 11%; }
+.con-form .campo-mensaje { top: 50%;   height: 28%; padding-top: 14px; resize: none; }
+
+/* Estado normal: ícono + texto */
+.con-form .campo-nombre  { background-image: url("img/contacto/Nombre\ completo\ -\ Activado\.png"); }
+.con-form .campo-correo  { background-image: url("img/contacto/Correo\ electrónico\ -\ Activado\ .png"); }
+.con-form .campo-mensaje { background-image: url("img/contacto/Escribe\ tu\ mensaje\ -\ Desactivado.png"); }
+
+/* Al hacer clic o escribir: solo ícono */
+.con-form .campo-nombre:focus,
+.con-form .campo-nombre:not(:placeholder-shown) {
+  background-image: url("img/contacto/Nombre\ completo\ -\ Activado\.png");
+}
+.con-form .campo-correo:focus,
+.con-form .campo-correo:not(:placeholder-shown) {
+  background-image: url("img/contacto/Correo\ electrónico\ -\ Activado\ .png");
+}
+.con-form .campo-mensaje:focus,
+.con-form .campo-mensaje:not(:placeholder-shown) {
+  background-image: url("img/contacto/Escribe\ tu\ mensaje\ -\ cuadro\ .png");
+}
+
+/* Botón */
+.con-form button {
+  position: absolute;
+  left: 22.7%;
+  top: 85%;
+  width: 53.6%;
+  height: 10%;
+  border: 0;
+  background: url("img/contacto/boton-enviar.png") center / 100% 100% no-repeat;
+  cursor: pointer;
+}
+
+.con-gracias { max-width: 560px; margin: 50px auto 0; padding: 0 20px; }
+.con-gracias img { display: block; width: 100%; height: auto; }
+
+@media (max-width: 800px) {
+  .con-grid { grid-template-columns: 1fr; }
+  .con-fondo { padding-bottom: 80px; }
+}
